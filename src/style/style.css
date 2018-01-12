@@ -1,5 +1,6 @@
+@import url('style-components/album.css');
+
 body {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
-	background-color: #005cbf;
 }

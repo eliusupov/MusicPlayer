@@ -1,0 +1,42 @@
+.album {
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	margin: 50px;
+	list-style-type: none;
+	background-color: teal;
+}
+
+.selected-player {
+	height: 400px;
+	width: 700px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 100px;
+	background-color: red;
+}
+
+.album:hover {
+	opacity: 0.85;
+}
+
+.album-header {
+	position: relative;
+	top: -30px;
+}
+
+.album-button {
+	position: relative;
+	top: -350px;
+	left: 25px;
+}
+
+.play-button {
+	position: relative;
+	top: -230px;
+	left: -20px;
+}
+
+.list-icon {
+	margin-top: 25%;
+}
