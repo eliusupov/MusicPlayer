@@ -26,6 +26,23 @@ module.exports = merge(common, {
 					},
 				],
 			},
+			{
+				test: /\.(png|svg|jpg|gif|mp3)$/,
+				use: {
+					loader: 'file-loader',
+				},
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
+						},
+					},
+				],
+			},
 		],
 	},
 	devtool: 'inline-source-map',

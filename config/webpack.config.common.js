@@ -8,7 +8,7 @@ const src = path.resolve(__dirname, '../src');
 // webpack config // css loaders in diff configs (dev\prod)
 module.exports = {
 	entry: {
-		app: `${src}/index.js`,
+		app: `${src}/app.js`,
 	},
 	module: {
 		rules: [
@@ -20,23 +20,6 @@ module.exports = {
 			{
 				test: /\.html$/,
 				loader: ['html-loader'],
-			},
-			{
-				test: /\.(png|svg|jpg|gif)$/,
-				use: [
-					'file-loader',
-				],
-			},
-			{
-				test: /\.(png|jpg|gif)$/,
-				use: [
-					{
-						loader: 'url-loader',
-						options: {
-							limit: 8192,
-						},
-					},
-				],
 			},
 		],
 	},

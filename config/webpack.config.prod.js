@@ -47,7 +47,27 @@ module.exports = merge(common, {
 					],
 				}),
 			},
-		]
+			{
+				test: /\.(png|svg|jpg|gif|mp3)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						outputPath: 'assets/songs/',
+					},
+				},
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
+						},
+					},
+				],
+			},
+		],
 	},
 	devtool: 'source-map',
 	plugins: [
